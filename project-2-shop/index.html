@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امیرشاپ | فروشگاه اینترنتی</title>
+    <meta name="description" content="فروشگاه اینترنتی امیرشاپ - موبایل، لپ‌تاپ و لوازم جانبی">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">امیر<span>شاپ</span></a>
+            <div class="search-box">
+                <input type="text" id="searchInput" data-i18n-ph="searchPh" placeholder="جست‌وجو محصول...">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="nav-tools">
+                <button id="langBtn" class="tool-btn">EN</button>
+                <button id="themeBtn" class="tool-btn">🌙</button>
+                <button id="cartBtn" class="cart-btn">🛒 <span id="cartCount">۰</span></button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero container">
+        <div class="hero-text">
+            <div class="badge">✦ ارسال سریع + ضمانت ۷ روزه</div>
+            <h1 data-i18n="heroTitle">هر چی برای دیجیتال لازم داری، اینجاست</h1>
+            <p data-i18n="heroSub">موبایل، لپ‌تاپ، هدفون و ساعت هوشمند با بهترین قیمت و تخفیف ویژه</p>
+            <div class="hero-offers">
+                <div class="offer"><strong>٪۲۰</strong><small data-i18n="o1">تخفیف موبایل</small></div>
+                <div class="offer"><strong data-i18n="o2v">رایگان</strong><small data-i18n="o2">ارسال بالای ۱
+                        میلیون</small></div>
+                <div class="offer"><strong>۷ روز</strong><small data-i18n="o3">مهلت مرجوعی</small></div>
+            </div>
+        </div>
+        <div class="hero-banner">
+            <div class="banner-card">
+                <span class="banner-tag" data-i18n="hotTag">پیشنهاد داغ 🔥</span>
+                <div class="banner-emoji">🎧</div>
+                <h3 data-i18n="hotTitle">هدفون گیمینگ پرو</h3>
+                <p><s>۳٬۵۰۰٬۰۰۰</s> <strong>۲٬۴۹۰٬۰۰۰ تومان</strong></p>
+                <button class="btn" onclick="addToCart(3)" data-i18n="addBtn">افزودن به سبد</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section container">
+        <div class="toolbar">
+            <div class="filters" id="filters">
+                <button class="filter active" data-cat="all" data-i18n="fAll">همه</button>
+                <button class="filter" data-cat="mobile" data-i18n="fMob">موبایل</button>
+                <button class="filter" data-cat="laptop" data-i18n="fLap">لپ‌تاپ</button>
+                <button class="filter" data-cat="audio" data-i18n="fAud">صوتی</button>
+                <button class="filter" data-cat="wear" data-i18n="fWear">پوشیدنی</button>
+            </div>
+            <select id="sortSelect" class="sort">
+                <option value="new" data-i18n="sNew">جدیدترین</option>
+                <option value="cheap" data-i18n="sCheap">ارزان‌ترین</option>
+                <option value="exp" data-i18n="sExp">گران‌ترین</option>
+                <option value="off" data-i18n="sOff">بیشترین تخفیف</option>
+            </select>
+        </div>
+        <p class="result-count" id="resultCount"></p>
+        <div class="grid" id="productGrid"></div>
+    </section>
+
+    <section class="features container">
+        <div class="feature"><span>🚚</span>
+            <div><strong data-i18n="fe1t">ارسال سریع</strong><small data-i18n="fe1d">به سراسر کشور</small></div>
+        </div>
+        <div class="feature"><span>🛡️</span>
+            <div><strong data-i18n="fe2t">ضمانت اصالت</strong><small data-i18n="fe2d">کالای اورجینال</small></div>
+        </div>
+        <div class="feature"><span>💳</span>
+            <div><strong data-i18n="fe3t">پرداخت امن</strong><small data-i18n="fe3d">درگاه معتبر</small></div>
+        </div>
+        <div class="feature"><span>📞</span>
+            <div><strong data-i18n="fe4t">پشتیبانی</strong><small data-i18n="fe4d">۷ روز هفته</small></div>
+        </div>
+    </section>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-head">
+            <h3 data-i18n="cartTitle">سبد خرید</h3>
+            <button id="closeCart" class="close-btn">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-foot">
+            <div class="total-row"><span data-i18n="totalLbl">جمع کل:</span><strong id="cartTotal">۰ تومان</strong>
+            </div>
+            <button class="btn full" id="checkoutBtn" data-i18n="checkout">تسویه حساب</button>
+            <button class="clear-btn" id="clearCart" data-i18n="clear">خالی کردن سبد</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+    <footer class="footer">
+        <p class="copy">© 1405 امیرشاپ | ساخته‌شده توسط امیر عباسی با HTML CSS JS</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آکادمی نخبگان عباسی|Elite Academy</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Poppins:wght@400;600;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text" data-i18n="brand">آکادمی نخبگان عباسی</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#home" data-i18n="nav_home">خانه</a>
+        <a href="#courses" data-i18n="nav_courses">دوره‌ها</a>
+        <a href="#teachers" data-i18n="nav_teachers">اساتید</a>
+        <a href="#stats" data-i18n="nav_stats">دستاوردها</a>
+        <a href="#contact" data-i18n="nav_contact">تماس</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" title="تغییر تم">
+          <span class="icon-sun">☀️</span>
+          <span class="icon-moon">🌙</span>
+        </button>
+        <button class="lang-toggle" id="langToggle" title="English">
+          <span class="lang-label">EN</span>
+        </button>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-particles"></div>
+    <div class="hero-content">
+      <span class="hero-badge" data-i18n="hero_badge">✨ ثبت‌نام ترم جدید آغاز شد</span>
+      <h1 class="hero-title">
+        <span data-i18n="hero_title1">آینده‌ات را</span>
+        <span class="gradient-text" data-i18n="hero_title2">همین‌جا بساز</span>
+      </h1>
+      <p class="hero-sub" data-i18n="hero_sub">
+        آموزش تخصصی برنامه‌نویسی، دیجیتال مارکتینگ و طراحی با بهترین اساتید ایران — پروژه‌محور، کاربردی و با پشتیبانی
+        مادام‌العمر.
+      </p>
+      <div class="hero-btns">
+        <a href="#courses" class="btn btn-primary" data-i18n="hero_cta1">مشاهده دوره‌ها</a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta2">مشاوره رایگان</a>
+      </div>
+      <div class="hero-social-proof">
+        <div class="avatars">
+          <span>👤</span><span>👩</span><span>🧑</span><span>👨</span>
+        </div>
+        <p><b data-i18n="proof_count">+۱۲,۰۰۰</b> <span data-i18n="proof_text">دانشجوی موفق تا امروز</span></p>
+      </div>
+    </div>
+    <div class="scroll-hint">⌄</div>
+  </section>
+
+  <section class="stats-section" id="stats">
+    <div class="container stats-grid">
+      <div class="stat-card">
+        <span class="stat-num" data-count="12000">۰</span>
+        <span class="stat-label" data-i18n="stat1">دانشجو</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-count="85">۰</span>
+        <span class="stat-label" data-i18n="stat2">دوره تخصصی</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-count="40">۰</span>
+        <span class="stat-label" data-i18n="stat3">استاد حرفه‌ای</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-count="97">۰</span>
+        <span class="stat-label" data-i18n="stat4">رضایت (٪)</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="courses">
+    <div class="container">
+      <h2 class="section-title" data-i18n="courses_title">دوره‌های محبوب</h2>
+      <p class="section-sub" data-i18n="courses_sub">از صفر تا ورود به بازار کار</p>
+      <div class="courses-grid">
+        <article class="course-card">
+          <div class="course-icon" style="--c:#6c5ce7">💻</div>
+          <h3 data-i18n="c1_t">برنامه‌نویسی وب فول‌استک</h3>
+          <p data-i18n="c1_d">جاوااسکریپت، ری‌اکت، نود و پروژه واقعی از روز اول.</p>
+          <div class="course-meta">
+            <span>⭐ ۴.۹</span><span>⏱ ۹۰ ساعت</span>
+          </div>
+          <div class="course-price"><s>۴,۸۰۰,۰۰۰</s> <b>۳,۲۰۰,۰۰۰ تومان</b></div>
+        </article>
+        <article class="course-card featured">
+          <span class="ribbon" data-i18n="ribbon">پرفروش‌ترین</span>
+          <div class="course-icon" style="--c:#e84393">🎨</div>
+          <h3 data-i18n="c2_t">طراحی UI/UX با فیگما</h3>
+          <p data-i18n="c2_d">از اصول طراحی تا ساخت پورتفولیوی حرفه‌ای.</p>
+          <div class="course-meta">
+            <span>⭐ ۵.۰</span><span>⏱ ۴۵ ساعت</span>
+          </div>
+          <div class="course-price"><s>۳,۵۰۰,۰۰۰</s> <b>۲,۴۰۰,۰۰۰ تومان</b></div>
+        </article>
+        <article class="course-card">
+          <div class="course-icon" style="--c:#00b894">📈</div>
+          <h3 data-i18n="c3_t">دیجیتال مارکتینگ</h3>
+          <p data-i18n="c3_d">سئو، تبلیغات و رشد برند در شبکه‌های اجتماعی.</p>
+          <div class="course-meta">
+            <span>⭐ ۴.۸</span><span>⏱ ۶۰ ساعت</span>
+          </div>
+          <div class="course-price"><s>۴,۰۰۰,۰۰۰</s> <b>۲,۸۰۰,۰۰۰ تومان</b></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section teachers-section" id="teachers">
+    <div class="container">
+      <h2 class="section-title" data-i18n="teachers_title">اساتید ما</h2>
+      <p class="section-sub" data-i18n="teachers_sub">مدرسانی که صنعت را ساخته‌اند</p>
+      <div class="teachers-grid">
+        <div class="teacher-card">
+          <div class="teacher-avatar">🧑‍💻</div>
+          <h3 data-i18n="t1_n">مهندس آرش محمدی</h3>
+          <p data-i18n="t1_r">توسعه‌دهنده ارشد وب</p>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-avatar">👩‍🎨</div>
+          <h3 data-i18n="t2_n">سارا احمدی</h3>
+          <p data-i18n="t2_r">طراح محصول و UX</p>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-avatar">👨‍💼</div>
+          <h3 data-i18n="t3_n">نیما رضایی</h3>
+          <p data-i18n="t3_r">کارشناس ارشد مارکتینگ</p>
+        </div>
+        <div class="teacher-card">
+          <div class="teacher-avatar">👩‍🏫</div>
+          <h3 data-i18n="t4_n">مینا کریمی</h3>
+          <p data-i18n="t4_r">دکترای مدیریت کسب‌وکار</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <h2 data-i18n="cta_t">همین امروز اولین قدم را بردار 🚀</h2>
+      <p data-i18n="cta_d">مشاوره رایگان بگیر و مسیر رشدت را شروع کن.</p>
+      <a href="#contact" class="btn btn-primary" data-i18n="cta_btn">شروع کن</a>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <h2 class="section-title right" data-i18n="contact_title">در تماس باشیم</h2>
+        <p data-i18n="contact_d">سؤالی داری؟ فرم را پر کن، کارشناسان ما در سریع‌ترین زمان پاسخ می‌دهند.</p>
+      </div>
+      <form class="contact-form"
+        onsubmit="event.preventDefault(); this.reset(); alert(lang==='fa'?'پیام شما ارسال شد ✅':'Message sent ✅');">
+        <input type="text" placeholder="نام و نام خانوادگی" required>
+        <input type="tel" placeholder="شماره تماس" required>
+        <textarea rows="4" placeholder="پیام شما"></textarea>
+        <button type="submit" class="btn btn-primary full" data-i18n="send">ارسال پیام</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© ۱۴۰۵ آکادمی نخبگان — <span data-i18n="footer">همه حقوق محفوظ است.</span></p>
+      <div class="socials">
+        <a href="#">📷</a><a href="#">✈️</a><a href="#">▶️</a><a href="#">💼</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

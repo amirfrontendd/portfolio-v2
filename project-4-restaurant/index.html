@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رستوران شب‌های کرمانشاه</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo" data-i18n="logo">شب‌های کرمانشاه</a>
+            <div class="nav-tools">
+                <button id="langBtn" class="tool-btn">EN</button>
+                <button id="themeBtn" class="tool-btn">🌙</button>
+                <button id="cartBtn" class="cart-btn"><span data-i18n="orderBtn">سفارش</span> <span
+                        id="cartCount">0</span></button>
+                <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            </div>
+        </nav>
+        <ul class="nav-links container" id="navLinks">
+            <li><a href="#home" data-i18n="nHome">خانه</a></li>
+            <li><a href="#menu" data-i18n="nMenu">منو</a></li>
+            <li><a href="#reserve" data-i18n="nRes">رزرو میز</a></li>
+            <li><a href="#contact" data-i18n="nCon">تماس</a></li>
+        </ul>
+    </header>
+    <section class="hero container" id="home">
+        <div class="hero-text">
+            <div class="badge" data-i18n="badge">دنده‌کباب اصیل + ارسال ۳۰ دقیقه‌ای</div>
+            <h1 data-i18n="heroT">طعم واقعی کرمانشاه، داغ و تازه</h1>
+            <p data-i18n="heroS">کباب، خورشت خلال و آش عباسعلی. رزرو میز یا سفارش آنلاین.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn" data-i18n="bMenu">دیدن منو</a>
+                <a href="#reserve" class="btn btn-outline" data-i18n="bRes">رزرو میز</a>
+            </div>
+        </div>
+        <div class="hero-card">
+            <div class="big">🍢</div>
+            <h3 data-i18n="todayT">پیشنهاد امروز</h3>
+            <p data-i18n="todayS">دنده‌کباب + نان داغ + دوغ محلی</p>
+            <strong data-i18n="todayP">۳۹۰٬۰۰۰ تومان</strong>
+            <button class="btn white" id="todayBtn" data-i18n="todayB">افزودن به سفارش</button>
+        </div>
+    </section>
+    <section class="section container" id="menu">
+        <h2 class="title" data-i18n="menuT">منوی رستوران</h2>
+        <p class="subtitle" data-i18n="menuS">فیلتر کن و سفارشت رو ثبت کن</p>
+        <div class="filters" id="filters">
+            <button class="filter active" data-cat="all" data-i18n="fAll">همه</button>
+            <button class="filter" data-cat="kebab" data-i18n="fK">کباب‌ها</button>
+            <button class="filter" data-cat="local" data-i18n="fL">محلی</button>
+            <button class="filter" data-cat="dessert" data-i18n="fD">دسر</button>
+        </div>
+        <div class="grid" id="foodGrid"></div>
+    </section>
+    <section class="section container" id="reserve">
+        <h2 class="title" data-i18n="resT">رزرو میز</h2>
+        <p class="subtitle" data-i18n="resS">فرم رو پر کن، تأیید می‌کنیم</p>
+        <form class="form" id="resForm">
+            <div class="row">
+                <div class="field"><label data-i18n="lName">نام</label><input type="text" id="rName"
+                        data-i18n-ph="phName" placeholder="نام شما"><small class="error" id="eName"></small></div>
+                <div class="field"><label data-i18n="lPhone">موبایل</label><input type="text" id="rPhone"
+                        placeholder="0912..."><small class="error" id="ePhone"></small></div>
+            </div>
+            <div class="row">
+                <div class="field"><label data-i18n="lDate">تاریخ</label><input type="date" id="rDate"></div>
+                <div class="field"><label data-i18n="lCount">تعداد</label><select id="rCount">
+                        <option data-i18n="c2">۲ نفره</option>
+                        <option data-i18n="c4">۴ نفره</option>
+                        <option data-i18n="c6">۶ نفره</option>
+                        <option data-i18n="c8">۸ نفره</option>
+                    </select></div>
+            </div>
+            <button type="submit" class="btn full" data-i18n="resB">ثبت رزرو</button>
+            <p class="success" id="resOk" data-i18n="resOk">رزروت ثبت شد!</p>
+        </form>
+    </section>
+    <footer class="footer" id="contact">
+        <p class="copy" data-i18n="foot">رستوران شب‌های کرمانشاه | ساخته امیر عباسی • 09231374838</p>
+    </footer>
+    <div class="cart-overlay" id="overlay"></div>
+    <aside class="drawer" id="drawer">
+        <div class="drawer-h">
+            <h3 data-i18n="cartT">سفارش شما</h3><button id="closeCart">✕</button>
+        </div>
+        <div class="drawer-b" id="cartItems"></div>
+        <div class="drawer-f">
+            <div class="total"><span data-i18n="total">جمع:</span><strong id="cartTotal">۰</strong></div><button
+                class="btn full" id="payBtn" data-i18n="pay">ثبت سفارش</button>
+        </div>
+    </aside>
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

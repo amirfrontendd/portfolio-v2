@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>امیرپنل | داشبورد مدیریت</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="side-logo">امیر<span>پنل</span></div>
+            <div class="side-user">
+                <div class="avatar">ع</div>
+                <div><strong data-i18n="userName">امیر عباسی</strong><small data-i18n="userRole">مدیر فروشگاه</small>
+                </div>
+            </div>
+            <nav class="side-menu" id="sideMenu">
+                <a href="#" class="active" data-page="dash"><span>📊 <b data-i18n="mDash">داشبورد</b></span></a>
+                <a href="#" data-page="orders"><span>🛒 <b data-i18n="mOrders">سفارش‌ها</b></span><i>۸</i></a>
+                <a href="#" data-page="products"><span>📦 <b data-i18n="mProducts">محصولات</b></span></a>
+                <a href="#" data-page="users"><span>👥 <b data-i18n="mUsers">مشتریان</b></span></a>
+                <a href="#" data-page="settings"><span>⚙️ <b data-i18n="mSettings">تنظیمات</b></span></a>
+            </nav>
+            <p class="side-ver">V2 • Amir Abasi</p>
+        </aside>
+        <div class="main">
+            <header class="topbar">
+                <button class="icon-btn" id="menuBtn">☰</button>
+                <div class="search"><span>🔍</span><input type="text" id="search" data-i18n-ph="searchPh"
+                        placeholder="جست‌وجو در سفارش‌ها..."></div>
+                <div class="tools">
+                    <button id="themeBtn" class="tool-btn">🌙</button>
+                    <button id="langBtn" class="tool-btn">EN</button>
+                </div>
+            </header>
+            <section class="content">
+                <div class="title-row">
+                    <div>
+                        <h1 data-i18n="dashTitle">داشبورد فروش</h1>
+                        <p data-i18n="dashSub">نمای کلی امروز فروشگاهت</p>
+                    </div><button class="btn" id="reportBtn" data-i18n="reportBtn">+ گزارش جدید</button>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <div class="ic b">💰</div>
+                        <div><small data-i18n="s1">فروش امروز</small><strong>18,450,000</strong><span class="up">▲
+                                ۱۲٪</span></div>
+                    </div>
+                    <div class="stat">
+                        <div class="ic g">🛒</div>
+                        <div><small data-i18n="s2">سفارش‌ها</small><strong>342</strong><span class="up">▲ ۸٪</span>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="ic o">👥</div>
+                        <div><small data-i18n="s3">مشتری جدید</small><strong>58</strong><span class="up">▲ ۵٪</span>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="ic p">📦</div>
+                        <div><small data-i18n="s4">موجودی انبار</small><strong>1240</strong><span class="down">▼
+                                ۲٪</span></div>
+                    </div>
+                </div>
+                <div class="grid2">
+                    <div class="card">
+                        <div class="card-h">
+                            <h3 data-i18n="chartT">فروش ۷ روز اخیر</h3><span class="pill"
+                                data-i18n="yearTag">امسال</span>
+                        </div><canvas id="bar" width="600" height="230"></canvas>
+                    </div>
+                    <div class="card">
+                        <div class="card-h">
+                            <h3 data-i18n="pieT">فروش دسته‌ها</h3>
+                        </div><canvas id="pie" width="300" height="200"></canvas>
+                        <div class="cats"><span><i style="background:#3B82F6"></i><b data-i18n="cat1">موبایل
+                                    ۴۰٪</b></span><span><i style="background:#10B981"></i><b data-i18n="cat2">لپ‌تاپ
+                                    ۲۵٪</b></span><span><i style="background:#F59E0B"></i><b data-i18n="cat3">صوتی
+                                    ۲۰٪</b></span><span><i style="background:#EC4899"></i><b data-i18n="cat4">پوشیدنی
+                                    ۱۵٪</b></span></div>
+                    </div>
+                </div>
+                <div class="card" id="orderCard">
+                    <div class="card-h">
+                        <h3 data-i18n="tableT">آخرین سفارش‌ها</h3>
+                        <div class="filters"><button class="active" onclick="filterTable('all',this)"
+                                data-i18n="fAll">همه</button><button onclick="filterTable('ok',this)"
+                                data-i18n="fOk">تحویل‌شده</button><button onclick="filterTable('wait',this)"
+                                data-i18n="fWait">در راه</button><button onclick="filterTable('cancel',this)"
+                                data-i18n="fCancel">لغوشده</button></div>
+                    </div>
+                    <div class="tbl">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th data-i18n="th1">مشتری</th>
+                                    <th data-i18n="th2">محصول</th>
+                                    <th data-i18n="th3">مبلغ</th>
+                                    <th data-i18n="th4">وضعیت</th>
+                                </tr>
+                            </thead>
+                            <tbody id="body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Vazirmatn, Tahoma, sans-serif
+}
+
+:root {
+    --bg: #FFF8F0;
+    --card: #fff;
+    --text: #1C1917;
+    --muted: #78716C;
+    --brand: #C2410C;
+    --line: #F0E2CE
+}
+
+[data-theme="dark"] {
+    --bg: #140D08;
+    --card: #221610;
+    --text: #F5EDE4;
+    --muted: #A8A29E;
+    --line: #3A2A1E
+}
+
+body {
+    background: var(--bg);
+    color: var(--text)
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px
+}
+
+.header {
+    background: #1C1917;
+    position: sticky;
+    top: 0;
+    z-index: 50
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px
+}
+
+.logo {
+    color: #f70707;
+    font-weight: 900;
+    font-size: 20px;
+    text-decoration: none
+}
+
+.nav-tools {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.tool-btn {
+    background: #292524;
+    color: #fff;
+    border: 1px solid #44403C;
+    border-radius: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: inherit
+}
+
+.cart-btn {
+    background: #EA580C;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 14px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer
+}
+
+.hamburger span {
+    width: 24px;
+    height: 3px;
+    background: #fff;
+    display: block;
+    border-radius: 3px
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    padding-bottom: 10px
+}
+
+.nav-links a {
+    color: #E7E5E4;
+    text-decoration: none;
+    font-size: 14px
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 26px;
+    align-items: center;
+    padding: 40px 20px
+}
+
+.badge {
+    background: #FED7AA;
+    color: #9A3412;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px
+}
+
+.hero h1 {
+    font-size: clamp(24px, 4vw, 38px);
+    margin-bottom: 8px
+}
+
+.hero p {
+    color: var(--muted);
+    margin-bottom: 14px
+}
+
+.hero-btns {
+    display: flex;
+    gap: 10px
+}
+
+.btn {
+    background: linear-gradient(135deg, #EA580C, #C2410C);
+    color: #fff;
+    padding: 11px 24px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: none;
+    display: inline-block
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #C2410C;
+    color: #C2410C
+}
+
+.btn.white {
+    background: #fff;
+    color: #C2410C;
+    margin-top: 10px
+}
+
+.btn.full {
+    width: 100%
+}
+
+.hero-card {
+    background: linear-gradient(135deg, #7C2D12, #C2410C);
+    color: #fff;
+    border-radius: 20px;
+    padding: 26px;
+    text-align: center
+}
+
+.hero-card .big {
+    font-size: 72px
+}
+
+.section {
+    padding: 36px 20px
+}
+
+.title {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 6px
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 12px
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 14px
+}
+
+.filter {
+    background: var(--card);
+    border: 2px solid var(--line);
+    color: var(--text);
+    padding: 8px 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700
+}
+
+.filter.active {
+    background: #C2410C;
+    color: #fff;
+    border-color: #C2410C
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px
+}
+
+.food {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column
+}
+
+.f-img {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 54px;
+    color: #fff
+}
+
+.f1 {
+    background: linear-gradient(135deg, #7C2D12, #EA580C)
+}
+
+.f2 {
+    background: linear-gradient(135deg, #451A03, #F59E0B)
+}
+
+.f3 {
+    background: linear-gradient(135deg, #1C1917, #57534E)
+}
+
+.f4 {
+    background: linear-gradient(135deg, #7F1D1D, #EF4444)
+}
+
+.f5 {
+    background: linear-gradient(135deg, #14532D, #22C55E)
+}
+
+.f6 {
+    background: linear-gradient(135deg, #713F12, #EAB308)
+}
+
+.f7 {
+    background: linear-gradient(135deg, #581C87, #A855F7)
+}
+
+.f8 {
+    background: linear-gradient(135deg, #0C4A6E, #06B6D4)
+}
+
+.f-body {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1
+}
+
+.price {
+    font-weight: 900;
+    color: #C2410C
+}
+
+.f-body .btn {
+    margin-top: 8px;
+    padding: 9px
+}
+
+.form {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px;
+    max-width: 620px;
+    margin: auto
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px
+}
+
+.field input,
+.field select {
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: inherit;
+    background: var(--bg);
+    color: var(--text)
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    min-height: 16px
+}
+
+.success {
+    display: none;
+    background: #DCFCE7;
+    color: #15803D;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 8px
+}
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    z-index: 90
+}
+
+.cart-overlay.show {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.drawer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -360px;
+    width: 340px;
+    max-width: 90vw;
+    background: var(--card);
+    z-index: 100;
+    transition: .3s;
+    display: flex;
+    flex-direction: column
+}
+
+.drawer.open {
+    left: 0
+}
+
+.drawer-h {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    border-bottom: 1px solid var(--line)
+}
+
+.drawer-h button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--text)
+}
+
+.drawer-b {
+    flex: 1;
+    overflow: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.ci {
+    display: flex;
+    justify-content: space-between;
+    background: var(--bg);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    align-items: center
+}
+
+.qty {
+    display: flex;
+    gap: 6px
+}
+
+.qty button {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer
+}
+
+.drawer-f {
+    padding: 14px;
+    border-top: 1px solid var(--line)
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%) translateY(80px);
+    background: #1C1917;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: .3s;
+    z-index: 200
+}
+
+.toast.show {
+    transform: translateX(50%) translateY(0)
+}
+
+.footer {
+    background: #1C1917;
+    color: #A8A29E;
+    margin-top: 20px
+}
+
+.copy {
+    text-align: center;
+    padding: 14px;
+    font-size: 13px
+}
+
+@media(max-width:900px) {
+    .grid {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .hero {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(max-width:600px) {
+    .grid {
+        grid-template-columns: 1fr
+    }
+
+    .row {
+        grid-template-columns: 1fr
+    }
+
+    .nav-links {
+        display: none
+    }
+
+    .nav-links.open {
+        display: flex;
+        flex-direction: column
+    }
+
+    .hamburger {
+        display: flex
+    }
+}
